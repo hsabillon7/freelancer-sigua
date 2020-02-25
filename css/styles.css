@@ -106,3 +106,54 @@ p {
   font-weight: 700;
   border: none;
 }
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3em;
+  --webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.65);
+  margin-bottom: 3em;
+}
+@media (min-width: 768px) {
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* 
+  Cada contenedor dentro de un contenedor flex puede
+  tener las prodiedades: flex-grow, flex-shrink y 
+  flex-basis. Estos valores se pueden asignar utilizando
+  flex: <valor-grow> <valor-shrink> <valor-basis>
+   */
+  .service {
+    flex: 0 0 calc(33.3% - 1 em);
+  }
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  height: 6.25em;
+  width: 6.25em;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+.icons i {
+  font-size: 2em;
+  color: var(--white);
+}
+form {
+  background-color: var(--gray);
+  padding: 2em;
+  border-radius: 0.6em;
+}
+form legend {
+}
